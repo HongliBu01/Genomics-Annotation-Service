@@ -1,0 +1,12 @@
+#! /bin/bash
+export WORKON_HOME=~/.virtualenvs
+VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+cd /home/ubuntu/
+source /usr/local/bin/virtualenvwrapper.sh
+source /home/ubuntu/.virtualenvs/mpcs/bin/activate
+pip install simplejson
+aws s3 cp s3://mpcs-students/honglibu/gas_annotator.zip /home/ubuntu/
+unzip -o gas_annotator.zip
+chown -R ubuntu:ubuntu /home/ubuntu/anntools
+chmod +x /home/ubuntu/anntools/run_annotator.sh
+sudo -u ubuntu /home/ubuntu/anntools/run_annotator.sh

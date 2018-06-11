@@ -1,0 +1,70 @@
+<!--
+annotate.html - Direct upload to Amazon S3 using signed POST request
+Copyright (C) 2011-2018 Vas Vasiliadis <vas@uchicago.edu>
+University of Chicago
+-->
+
+{% extends "base.html" %}
+
+{% block title %}Annotate{% endblock %}
+
+{% block body %}
+
+  {% include "header.html" %}
+  <script type='text/javascript'>
+    function checkFileSize(size) {
+      var input, file;
+
+      if (!window.FileReader) {
+        alert("The file isn't supported on this browser.");
+        return;
+      } 
+
+      input = document.getElementById('upload-file');
+      file = input.files[0]
+      if (file && (size < 0 || file.size <= size)){
+        return true;
+      }else {
+        redirect();
+        return false;
+      }
+    }
+    function redirect() {
+      alert('This file size exceeds the limit for free user, you can subscribe!')
+      window.location.replace("{{ url_for('subscribe') }}");
+    }
+  </script>
+
+  <div class="container">
+    
+    <div class="page-header">
+      <h1>Annotate VCF File</h1>
+    </div>
+
+  	<div class="form-wrapper">
+      <form role="form" action="{{ s3_post.url }}" method="post" enctype="multipart/form-data" onSubmit="return checkFileSize({{ size }});">
+        {% for key, value in s3_post.fields.items() %}
+        <input type="hidden" name="{{ key }}" value="{{ value }}" />
+        {% endfor %}
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="upload">Select VCF Input File</label>
+            <div class="input-group col-md-12">
+              <span class="input-group-btn">
+                <span class="btn btn-default btn-file btn-lg">Browse&hellip; <input type="file" name="file" id="upload-file" /></span>
+              </span>
+              <input type="text" class="form-control col-md-6 input-lg" readonly />
+            </div>
+          </div>
+        </div>
+        <br />
+            <div id="message"></div>
+  			<div class="form-actions">
+  				<input class="btn btn-lg btn-primary" type="submit" value="Annotate" onclick="showFileSize();" />
+  			</div>
+      </form>
+    </div>
+    
+  </div>
+{% endblock %}
+

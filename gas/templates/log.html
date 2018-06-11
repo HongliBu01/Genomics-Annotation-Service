@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Logs{% endblock %}
+{% block body %}
+	{% include "header.html" %}
+	<div class="container">
+		<div class="page-header">
+			<h1>Logs</h1>
+		</div>
+		<div class="row">
+		{% if response == 'No Job' %}
+			<p> The Job doesn't exist!</p>
+		{% elif response == 'No Permission' %}
+			<p> No authorization to view the job!</p>
+		{% else %}
+			{% if response == 'Not Completed' %}
+				<p> Job haven't been completed!</p>
+			{% else %}
+        		{% for item in log_text %}
+          		<br>{{item}}
+        		{% endfor %}
+			{% endif %}
+		{% endif %}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Annotation Details{% endblock %}
+{% block body %}
+	{% include "header.html" %}
+	<div class="container">
+		<div class="page-header">
+			<h1>Annotation Details</h1>
+		</div>
+ 
+		
+		<div class="row">
+			{% if response == 'No Job' %}
+				<p> The Job doesn't exist!</p>
+			{% elif response == 'No Permission' %}
+				<p> No authorization to view the job!</p>
+			{% else %}
+				<div class = "col-md-12"> 
+					<b>Request ID: </b>{{item['job_id']}}
+				</div>
+				<div class = "col-md-12"> 
+					<b>Request Time: </b>{{item['submit_time']}}
+				</div>
+				<div class = "col-md-12"> 
+					<b>VCF Input File : </b>{{item['input_file_name']}}
+				</div>
+				<div class = "col-md-12">
+					<b>Status: </b>{{item['job_status']}}
+				</div>
+				{% if response == 'Not Completed' %}
+					<div class = "col-md-12">
+						<b>Complete Time: </b>None
+					</div>
+				{% else %}
+					<div class = "col-md-12">
+						<b>Complete Time: </b>{{item['complete_time']}}
+					</div>
+				{% endif %}
+			{% endif %}
+
+		</div>
+		{% if response == 'Completed' %}
+		<div class="row">
+    		<div class="col-md-12"><b>Annotation Results File: </b><a href="{{download_url}}">download</a> </div>
+    		<div class="col-md-12"><b>Annotation Log File: </b> <a href="{{view_url}}">view</a></div>
+    	</div>
+
+    	{% elif response == 'Archived' %}
+    	<div class="row">
+    		<div class="col-md-12"><b>Annotation Results File: </b><a href="{{url_for('subscribe')}}">subscribe</a> </div>
+    		<div class="col-md-12"><b>Annotation Log File: </b> <a href="{{view_url}}">view</a></div>
+    	</div>
+
+    	{% else %}
+    	<div class="row">
+    		<div class="col-md-12"><b>Annotation Results File: </b> Not Available</div>
+    		<div class="col-md-12"><b>Annotation Log File: </b> Not Available</div>
+    	</div>
+    	{% endif %}
+		<div class="row">
+			<a href="{{ url_for('annotations_list') }}" title="back to annotations list"><i class="fa fa-arrow-left fa-lg"></i> back to annotations list
+      		</a>
+    	</div>
+
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+##
+# Specify in this order (one parameter per line):
+# host, user, password, database, port
+# Please do not modify - the values are set to access
+# a shared database owned by another AWS account
+##
+
+anntools.c7opeeyykeju.us-east-1.rds.amazonaws.com
+annotator
+UbcpcU9t7yyKLQ
+annotator
+3306

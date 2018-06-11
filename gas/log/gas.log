@@ -1,0 +1,351 @@
+2018-06-03 22:36:15,862 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0 [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 177, in annotation_details
+    print(str(role) + " " + str(time_diff))
+OSError: [Errno 5] Input/output error
+2018-06-03 22:43:45,146 ERROR: Exception on /annotations/792c5233-71f6-49e6-8520-0c14e7a56d53/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 234, in annotation_log
+    log_file = s3.Object(Bucket=result_bucket_name, Key=result_log_key)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/boto3/resources/factory.py", line 474, in create_resource
+    client=self.meta.client)(*args, **kwargs)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/boto3/resources/base.py", line 111, in __init__
+    raise ValueError('Unknown keyword argument: {0}'.format(name))
+ValueError: Unknown keyword argument: Bucket
+2018-06-03 22:45:06,289 INFO: Worker exiting (pid: 7975) 
+2018-06-03 22:45:06,289 INFO: Worker exiting (pid: 7974) 
+2018-06-03 22:45:06,290 INFO: Worker exiting (pid: 7976) 
+2018-06-03 22:45:06,290 INFO: Worker exiting (pid: 7973) 
+2018-06-03 22:48:23,105 INFO: Worker exiting (pid: 8058) 
+2018-06-03 22:48:23,107 INFO: Worker exiting (pid: 8055) 
+2018-06-03 22:48:23,106 INFO: Worker exiting (pid: 8054) 
+2018-06-03 22:48:23,107 INFO: Worker exiting (pid: 8056) 
+2018-06-03 22:49:05,559 INFO: Worker exiting (pid: 8134) 
+2018-06-03 22:49:05,560 INFO: Worker exiting (pid: 8131) 
+2018-06-03 22:49:05,561 INFO: Worker exiting (pid: 8135) 
+2018-06-03 22:49:05,563 INFO: Worker exiting (pid: 8132) 
+2018-06-03 22:51:21,870 INFO: Worker exiting (pid: 8174) 
+2018-06-03 22:51:21,869 INFO: Worker exiting (pid: 8177) 
+2018-06-03 22:51:21,870 INFO: Worker exiting (pid: 8172) 
+2018-06-03 22:52:17,112 INFO: Worker exiting (pid: 8223) 
+2018-06-03 22:52:17,114 INFO: Worker exiting (pid: 8224) 
+2018-06-03 22:52:17,113 INFO: Worker exiting (pid: 8221) 
+2018-06-03 22:52:17,126 INFO: Worker exiting (pid: 8225) 
+2018-06-03 22:53:20,226 INFO: Worker exiting (pid: 8270) 
+2018-06-03 22:53:20,227 INFO: Worker exiting (pid: 8273) 
+2018-06-03 22:53:20,225 INFO: Worker exiting (pid: 8271) 
+2018-06-03 22:53:20,227 INFO: Worker exiting (pid: 8275) 
+2018-06-03 22:53:20,885 INFO: Worker exiting (pid: 7099) 
+2018-06-03 22:54:43,440 INFO: Worker exiting (pid: 8337) 
+2018-06-03 22:54:43,439 INFO: Worker exiting (pid: 8333) 
+2018-06-03 22:54:43,440 INFO: Worker exiting (pid: 8334) 
+2018-06-03 22:54:43,454 INFO: Worker exiting (pid: 8336) 
+2018-06-03 22:57:12,807 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 236, in annotation_log
+    print(type(log_text))
+OSError: [Errno 5] Input/output error
+2018-06-03 22:57:28,859 INFO: Worker exiting (pid: 8407) 
+2018-06-03 22:57:28,860 INFO: Worker exiting (pid: 8410) 
+2018-06-03 22:57:28,859 INFO: Worker exiting (pid: 8408) 
+2018-06-03 22:58:00,386 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 236, in annotation_log
+    log_text = log_content.replace("\n", '<br/>')
+OSError: [Errno 5] Input/output error
+2018-06-03 22:58:03,295 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 236, in annotation_log
+    log_text = log_content.replace("\n", '<br/>')
+NameError: name 'log_content' is not defined
+2018-06-03 22:58:16,662 INFO: Worker exiting (pid: 8480) 
+2018-06-03 22:58:16,664 INFO: Worker exiting (pid: 8477) 
+2018-06-03 22:58:16,663 INFO: Worker exiting (pid: 8478) 
+2018-06-03 22:58:38,479 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 236, in annotation_log
+    log_text = log_text.replace("\n", '<br/>')
+OSError: [Errno 5] Input/output error
+2018-06-03 22:59:11,122 INFO: Worker exiting (pid: 8550) 
+2018-06-03 22:59:11,126 INFO: Worker exiting (pid: 8554) 
+2018-06-03 22:59:15,599 INFO: Worker exiting (pid: 8552) 
+2018-06-03 22:59:15,600 INFO: Worker exiting (pid: 8562) 
+2018-06-03 22:59:15,598 INFO: Worker exiting (pid: 8553) 
+2018-06-03 22:59:41,583 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 236, in annotation_log
+    log_text = log_text.replace("\n", '<br/>')
+OSError: [Errno 5] Input/output error
+2018-06-03 23:00:03,255 INFO: Worker exiting (pid: 8575) 
+2018-06-03 23:00:03,256 INFO: Worker exiting (pid: 8576) 
+2018-06-03 23:00:03,255 INFO: Worker exiting (pid: 8572) 
+2018-06-03 23:00:03,254 INFO: Worker exiting (pid: 8573) 
+2018-06-03 23:00:27,699 INFO: Worker exiting (pid: 8282) 
+2018-06-03 23:00:27,702 INFO: Worker exiting (pid: 8363) 
+2018-06-03 23:10:25,592 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 235, in annotation_log
+    log_text = json.loads(log_file.get()['Body'].read().decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2018-06-03 23:10:42,359 INFO: Worker exiting (pid: 8755) 
+2018-06-03 23:10:42,358 INFO: Worker exiting (pid: 8750) 
+2018-06-03 23:10:42,359 INFO: Worker exiting (pid: 8751) 
+2018-06-03 23:12:51,893 INFO: Worker exiting (pid: 8809) 
+2018-06-03 23:12:51,893 INFO: Worker exiting (pid: 8812) 
+2018-06-03 23:12:51,893 INFO: Worker exiting (pid: 8811) 
+2018-06-03 23:12:51,894 INFO: Worker exiting (pid: 8814) 
+2018-06-03 23:16:45,888 INFO: Worker exiting (pid: 8940) 
+2018-06-03 23:16:45,889 INFO: Worker exiting (pid: 8941) 
+2018-06-03 23:16:45,890 INFO: Worker exiting (pid: 8944) 
+2018-06-03 23:16:45,894 INFO: Worker exiting (pid: 8942) 
+2018-06-03 23:19:11,092 INFO: Worker exiting (pid: 9014) 
+2018-06-03 23:19:11,091 INFO: Worker exiting (pid: 9012) 
+2018-06-03 23:19:11,090 INFO: Worker exiting (pid: 9010) 
+2018-06-03 23:19:11,106 INFO: Worker exiting (pid: 9013) 
+2018-06-03 23:19:18,393 INFO: Worker exiting (pid: 8601) 
+2018-06-03 23:21:52,572 INFO: Worker exiting (pid: 9083) 
+2018-06-03 23:21:52,572 INFO: Worker exiting (pid: 9080) 
+2018-06-03 23:21:52,571 INFO: Worker exiting (pid: 9078) 
+2018-06-03 23:22:07,716 INFO: Worker exiting (pid: 8285) 
+2018-06-03 23:22:28,106 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 236, in annotation_log
+OSError: [Errno 5] Input/output error
+2018-06-03 23:22:46,172 ERROR: Exception on /annotations/792c5233-71f6-49e6-8520-0c14e7a56d53 [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 177, in annotation_details
+    print(str(role) + " " + str(time_diff))
+OSError: [Errno 5] Input/output error
+2018-06-03 23:22:51,964 INFO: Worker exiting (pid: 9150) 
+2018-06-03 23:22:51,963 INFO: Worker exiting (pid: 9149) 
+2018-06-03 23:22:51,965 INFO: Worker exiting (pid: 9147) 
+2018-06-03 23:22:51,964 INFO: Worker exiting (pid: 9146) 
+2018-06-03 23:28:22,115 ERROR: Exception on /annotations/792c5233-71f6-49e6-8520-0c14e7a56d53/log [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 236, in annotation_log
+    return render_template('log.html', response = 'Completed',log_text = log_text)
+OSError: [Errno 5] Input/output error
+2018-06-03 23:28:44,940 INFO: Worker exiting (pid: 9204) 
+2018-06-03 23:28:44,940 INFO: Worker exiting (pid: 9201) 
+2018-06-03 23:28:44,941 INFO: Worker exiting (pid: 9202) 
+2018-06-03 23:28:44,939 INFO: Worker exiting (pid: 9200) 
+2018-06-03 23:29:04,316 INFO: Worker exiting (pid: 9022) 
+2018-06-03 23:30:13,869 INFO: Worker exiting (pid: 9254) 
+2018-06-03 23:30:13,870 INFO: Worker exiting (pid: 9252) 
+2018-06-03 23:51:54,724 INFO: Worker exiting (pid: 9444) 
+2018-06-03 23:51:54,725 INFO: Worker exiting (pid: 9446) 
+2018-06-03 23:51:54,724 INFO: Worker exiting (pid: 9445) 
+2018-06-03 23:51:54,725 INFO: Worker exiting (pid: 9443) 
+2018-06-03 23:59:55,774 INFO: Worker exiting (pid: 9121) 
+2018-06-03 23:59:56,063 INFO: Worker exiting (pid: 9523) 
+2018-06-04 00:00:26,802 INFO: Worker exiting (pid: 9522) 
+2018-06-04 00:00:26,802 INFO: Worker exiting (pid: 9524) 
+2018-06-04 00:00:26,803 INFO: Worker exiting (pid: 9525) 
+2018-06-04 00:00:26,814 INFO: Worker exiting (pid: 9547) 
+2018-06-04 00:01:56,663 INFO: Worker exiting (pid: 9571) 
+2018-06-04 00:01:56,664 INFO: Worker exiting (pid: 9574) 
+2018-06-04 00:01:56,662 INFO: Worker exiting (pid: 9572) 
+2018-06-04 00:06:19,492 INFO: Worker exiting (pid: 9661) 
+2018-06-04 00:06:19,491 INFO: Worker exiting (pid: 9662) 
+2018-06-04 00:06:19,502 INFO: Worker exiting (pid: 9665) 
+2018-06-04 00:07:49,661 INFO: Worker exiting (pid: 9717) 
+2018-06-04 00:07:49,661 INFO: Worker exiting (pid: 9718) 
+2018-06-04 00:07:49,662 INFO: Worker exiting (pid: 9715) 
+2018-06-04 00:07:49,660 INFO: Worker exiting (pid: 9719) 
+2018-06-04 00:09:55,449 INFO: Worker exiting (pid: 9821) 
+2018-06-04 00:09:55,449 INFO: Worker exiting (pid: 9820) 
+2018-06-04 00:09:55,448 INFO: Worker exiting (pid: 9822) 
+2018-06-04 00:09:55,449 INFO: Worker exiting (pid: 9825) 
+2018-06-04 00:10:56,752 INFO: Worker exiting (pid: 9868) 
+2018-06-04 00:10:56,752 INFO: Worker exiting (pid: 9865) 
+2018-06-04 00:10:56,751 INFO: Worker exiting (pid: 9867) 
+2018-06-04 00:10:56,762 INFO: Worker exiting (pid: 9869) 
+2018-06-04 00:27:12,902 INFO: Worker exiting (pid: 9545) 
+2018-06-04 00:27:13,026 INFO: Worker exiting (pid: 10043) 
+2018-06-04 00:28:40,836 INFO: Worker exiting (pid: 10042) 
+2018-06-04 00:28:40,837 INFO: Worker exiting (pid: 10044) 
+2018-06-04 00:28:40,837 INFO: Worker exiting (pid: 10041) 
+2018-06-04 00:28:40,838 INFO: Worker exiting (pid: 10055) 
+2018-06-04 00:33:10,030 ERROR: Exception on /annotations/03c6f1da-417f-461b-b492-b6afc85341a0 [GET] 
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/.virtualenvs/mpcs/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/ubuntu/gas/decorators.py", line 31, in decorated_function
+    return fn(*args, **kwargs)
+  File "/home/ubuntu/gas/views.py", line 183, in annotation_details
+    print(str(role) + " " + str(time_diff))
+OSError: [Errno 5] Input/output error
+2018-06-04 00:38:32,809 INFO: Worker exiting (pid: 10066) 
+2018-06-04 00:38:32,811 INFO: Worker exiting (pid: 10069) 
+2018-06-04 00:38:32,810 INFO: Worker exiting (pid: 10067) 
+2018-06-04 00:38:32,810 INFO: Worker exiting (pid: 10064) 
