@@ -18,8 +18,8 @@
   13. install simplejson: https://stackoverflow.com/questions/718040/how-to-install-simplejson-package-for-python 
 
 ## WorkLoad Testing:
-Used LOCUST
-details:
+Used LOCUST, 
+details:https://github.com/HongliBu01/Genomics-Annotation-Service/blob/master/Load%20Test.pdf
 
 ## Author:
 Hongli Bu
