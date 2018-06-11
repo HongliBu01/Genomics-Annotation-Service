@@ -4,7 +4,7 @@
 - if the web didn't work, i am sorry that i cannot afford to maintain my amazon instance then
 ## Reference:
   1.Java script to check file size: https://stackoverflow.com/questions/3717793/javascript-file-upload-size-validation
-  2.DynamoDB query: https://stackoverflow.com/questions/34171563/how-do-i-query-aws-dynamodb-in-python http://boto3.readthedocs.io/en/latest/reference/services/dynamodb.html#table
+  2.DynamoDB query: https://stackoverflow.com/questions/34171563/how-do-i-query-aws-dynamodb-in-python 
   3. Python change time format: https://stackoverflow.com/questions/19825330/python-how-to-convert-ctime-to-m-d-y-hms
   4. Generate presigned url: http://boto3.readthedocs.io/en/latest/reference/services/s3.html#S3.Client.generate_presigned_url
   5.s3 object read: https://stackoverflow.com/questions/31976273/open-s3-object-as-a-string-with-boto3/35376156
