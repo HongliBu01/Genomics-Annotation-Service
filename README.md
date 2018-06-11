@@ -17,6 +17,10 @@
   12. stripe test cards: https://stripe.com/docs/testing
   13. install simplejson: https://stackoverflow.com/questions/718040/how-to-install-simplejson-package-for-python 
 
+## WorkLoad Testing:
+Used LOCUST
+details:
+
 ## Author:
 Hongli Bu
 
