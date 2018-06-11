@@ -1,2 +1,3 @@
-# cp-HongliBu01
-See README.pdf
+# Genomics-Annotation-Service
+## Instructions:
+- subdomain: https://honglibu.ucmpcs.org
