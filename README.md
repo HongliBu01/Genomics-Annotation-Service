@@ -1,4 +1,6 @@
 # Genomics-Annotation-Service
+## Note:
+- The AWS servers have been shut down!
 ## Instructions:
 - subdomain: https://honglibu.ucmpcs.org   
 - if the web didn't work, i am sorry that i cannot afford to maintain my amazon instance then
